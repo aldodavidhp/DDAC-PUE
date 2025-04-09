@@ -17,7 +17,7 @@ st.set_page_config(
 )
 
 # --- Configuración Gemini ---
-genai.configure(api_key="AIzaSyBZjKJOdxThOmcotZRX0on6uoJnGviyK7g")
+genai.configure(api_key="AIzaSyDB8nfedASwDdg-xY4ZsFVeaxr1AzNPLgc")
 model = genai.GenerativeModel('gemini-1.5-flash')
 
 # --- Estilos CSS ---
@@ -85,7 +85,7 @@ def cargar_pdf(ruta_pdf):
 
 # --- Inicialización ---
 if "pdf_text" not in st.session_state:
-    pdf_content = cargar_pdf("APDAEMMA.pdf")
+    pdf_content = cargar_pdf("DDAC.pdf")
     if pdf_content is None:
         st.error("No se pudo cargar el documento PDF. Contacta al administrador.")
         st.stop()
@@ -93,7 +93,7 @@ if "pdf_text" not in st.session_state:
     st.session_state.pdf_text = pdf_content
     st.session_state.messages = [{
         "role": "assistant",
-        "content": "¡Hola! Soy tu tutor virtual para la formación APDA. "
+        "content": "¡Hola! Soy tu tutor virtual para la formación DDAC. "
                    "Puedes preguntarme cualquier duda sobre el curso. "
                    "Mis respuestas se basarán estrictamente en todos los aspectos relacionados con la formación."
     }]
@@ -101,7 +101,7 @@ if "pdf_text" not in st.session_state:
 # --- Interfaz Principal ---
 st.markdown("""
 <div class="header-gradient">
-    <h1 style="margin:0;">Tutor Virtual - Formación APDA</h1>
+    <h1 style="margin:0;">Tutor Virtual - Formación DDAC</h1>
     <p style="margin:0;"> </p>
 </div>
 """, unsafe_allow_html=True)
@@ -124,7 +124,7 @@ with col1:
         # Contexto estricto para Gemini
         contexto = f"""
         Eres un asistente académico especializado en responder preguntas sobre un documento específico.
-        Documento actual: APDAEMMA.pdf
+        Documento actual: DDAC.pdf
         Reglas estrictas:
         1. Responde EXCLUSIVAMENTE con información que puedas encontrar literalmente en el texto proporcionado
         2. Si la pregunta no puede responderse con el documento, di: "No cuento con esa respuesta. Por favor consulta a tu tutor."
@@ -184,7 +184,7 @@ with col2:
 with st.sidebar:
     st.title("ℹ️ Instrucciones")
     st.markdown("""
-    1. Pregunta lo relacionado con la convocatoria Acoso escolar: Prevención, Detección y Actuación
+    1. Pregunta lo relacionado con la convocatoria Docentes Digitales: ABP cine
     2. Sino encuentras/visualizas tu curso, revisa el correo con el que te inscribiste ingresando tu CURP en el panel derecho
     3. Cierre este panel, si deseas ver con mayor claridad la información
     """)
