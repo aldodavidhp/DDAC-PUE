@@ -93,7 +93,7 @@ if "pdf_text" not in st.session_state:
     st.session_state.pdf_text = pdf_content
     st.session_state.messages = [{
         "role": "assistant",
-        "content": "¡Hola! Soy tu tutor virtual para la formación DDAC. "
+        "content": "¡Hola! Soy tu tutor virtual para la formación ABP Cine. "
                    "Puedes preguntarme cualquier duda sobre el curso. "
                    "Mis respuestas se basarán estrictamente en todos los aspectos relacionados con la formación."
     }]
@@ -101,7 +101,7 @@ if "pdf_text" not in st.session_state:
 # --- Interfaz Principal ---
 st.markdown("""
 <div class="header-gradient">
-    <h1 style="margin:0;">Tutor Virtual - Formación DDAC</h1>
+    <h1 style="margin:0;">Tutor Virtual - Formación ABP Cine</h1>
     <p style="margin:0;"> </p>
 </div>
 """, unsafe_allow_html=True)
@@ -185,7 +185,7 @@ with st.sidebar:
     st.title("ℹ️ Instrucciones")
     st.markdown("""
     1. Pregunta lo relacionado con la convocatoria Docentes Digitales: ABP cine
-    2. Sino encuentras/visualizas tu curso, revisa el correo con el que te inscribiste ingresando tu CURP en el panel derecho
+    2. Si no encuentras/visualizas tu curso, revisa el correo con el que te inscribiste ingresando tu CURP en el panel derecho
     3. Cierre este panel, si deseas ver con mayor claridad la información
     """)
     
